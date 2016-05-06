@@ -325,7 +325,7 @@ Rest is shared between all Actor types
               <!-- Add Upgrade Choices here -->
               <!-- $upgradeplan contains the current State of the Station or the preffered default Setting of the Player in the same format as the return Value: -->
               <!-- ( [ [ **Upgrade1 Indentifier String/Tag ** , ** Upgrade 1 amount ** ] , [ ** Upgrade 2 Indentifier String/Tag ** , ** Upgrade 2 amount ** ] , ..... ] ) -->
-              <open_conversation_menu menu="UTUpgradeMenu" param="[0, 0, $actor, $actor.ship, $station, $upgradeplan]" comment="DANGER! WILL PROBABLY CRASH UI SINCE NOT EXISTENT YET! "/>
+              <open_conversation_menu menu="UTUpgradeMenu" param="[0, 0, $actor, $actor.ship, $station, $upgradeplan]"/>
             </do_elseif>
             <do_elseif value="event.param == 'comm_orders_upgrade_selected'">
               <set_value name="$new_order" exact="table[$script='ut.cac.com.architect.build',$displayname='Upgrade %1'.[$station.name],$upgradeplan=event.param2,$interruptable=true]"/>
